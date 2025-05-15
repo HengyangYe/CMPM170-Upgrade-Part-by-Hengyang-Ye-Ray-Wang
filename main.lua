@@ -65,7 +65,7 @@ function love.draw()
   -- show each rig in its own block (CPU/GPU/RAM/Yield/Speed/Crit)
   for i, r in ipairs(rigs) do
     local tag = (i==selIdx) and "► " or "  "
-    love.graphics.print(tag.."Rig "..i, G.STAT_X, y);               y = y + G.LINE_H
+    love.graphics.print(tag.."Unit "..i, G.STAT_X, y);               y = y + G.LINE_H
     love.graphics.print(" CPU  "..Rig.CPU[r.cpu].name,  G.STAT_X+15, y); y=y+G.LINE_H
     love.graphics.print(" GPU  "..Rig.GPU[r.gpu].name,  G.STAT_X+15, y); y=y+G.LINE_H
     love.graphics.print(" RAM  "..Rig.RAM[r.ram].name,  G.STAT_X+15, y); y=y+G.LINE_H
@@ -90,7 +90,7 @@ function love.draw()
   drawButton("RESET GAME", bx, by, G.BTN_W, 48)
 
   -------------------- footer hint -------------------------------------
-  love.graphics.print("Number keys 1-4 to select rig",
+  love.graphics.print("Number keys 1-4 to select Unit",
                       G.STAT_X, 525)
 end
 
